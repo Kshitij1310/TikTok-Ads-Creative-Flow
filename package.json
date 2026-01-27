@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@csstools/normalize.css": "^12.1.1",
-    "postcss-normalize": "^13.0.1"
+    "postcss-normalize": "^13.0.1",
+    "typescript": "^5.9.3"
   }
 }
