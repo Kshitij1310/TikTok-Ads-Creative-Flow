@@ -1,0 +1,170 @@
+.savedAdsSection {
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 24px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0;
+}
+
+.adsList {
+  display: grid;
+  gap: 16px;
+}
+
+.adCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.adCard:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #edf2f7;
+  background: #fafbfc;
+}
+
+.cardHeader h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+  flex: 1;
+  word-break: break-word;
+}
+
+.objective {
+  display: inline-block;
+  background: #0066cc;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.adText {
+  font-size: 0.95rem;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.details {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-weight: 500;
+  color: #4a5568;
+  min-width: 70px;
+}
+
+.value {
+  color: #2d3748;
+  text-align: right;
+  word-break: break-word;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 1px solid #edf2f7;
+  background: #fafbfc;
+}
+
+.deleteBtn {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #fc8181;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background: #fc8181;
+  color: white;
+  border-color: #f56565;
+}
+
+.deleteBtn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .savedAdsSection {
+    padding: 20px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardHeader h4 {
+    flex: auto;
+  }
+
+  .objective {
+    align-self: flex-start;
+  }
+
+  .detailRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .value {
+    text-align: left;
+  }
+}

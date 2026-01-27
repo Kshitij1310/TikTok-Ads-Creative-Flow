@@ -1,0 +1,110 @@
+.container {
+  margin: var(--spacing-lg) 0;
+}
+
+.connectBtn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  border: none;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(233, 59, 95, 0.2);
+  letter-spacing: 0.3px;
+}
+
+.connectBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #b81845 100%);
+  box-shadow: 0 4px 12px rgba(233, 59, 95, 0.3);
+  transform: translateY(-2px);
+}
+
+.connectBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.connectBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connectedState {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  background: #fafafa;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-success);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid var(--color-success);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.checkmark {
+  color: var(--color-success);
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-success);
+  color: white;
+  border-radius: 50%;
+}
+
+.connectedText {
+  flex: 1;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.disconnectBtn {
+  background-color: transparent;
+  color: var(--color-error);
+  border: 1.5px solid var(--color-error);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.disconnectBtn:hover {
+  background-color: var(--color-error);
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+.disconnectBtn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .connectBtn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.9375rem;
+  }
+
+  .connectedState {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+
+  .disconnectBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

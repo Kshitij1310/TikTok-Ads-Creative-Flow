@@ -1,0 +1,258 @@
+.container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+}
+
+.required {
+  color: var(--color-error);
+  margin-left: 2px;
+}
+
+.optionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.optionGroup {
+  border: 1.5px solid var(--color-border);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  background-color: var(--color-bg-primary);
+  cursor: pointer;
+}
+
+.optionGroup:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.optionGroup input[type="radio"]:checked ~ .radioText,
+.optionGroup input[type="radio"]:checked {
+  color: var(--color-primary);
+}
+
+.radioLabel {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: var(--spacing-lg);
+}
+
+.radio {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+}
+
+.radioText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.disabledHint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  font-weight: 400;
+  margin-top: var(--spacing-sm);
+}
+
+.inputGroup {
+  margin-top: var(--spacing-lg);
+  margin-left: 36px;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.input {
+  flex: 1;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: all var(--transition-base);
+  color: var(--color-text-primary);
+}
+
+.input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.inputError {
+  border-color: var(--color-error);
+  background-color: var(--color-error-light);
+}
+
+.validateBtn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0052a3 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.validateBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.validateBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.validateBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fileInputLabel {
+  display: flex;
+  align-items: center;
+  margin-left: 36px;
+  gap: var(--spacing-md);
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileInputButton {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0052a3 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.fileInputButton:hover {
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.fileInputButton:active {
+  transform: translateY(0);
+}
+
+.uploadedInfo {
+  margin-top: var(--spacing-lg);
+  margin-left: 36px;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  border-left: 4px solid var(--color-primary);
+}
+
+.fieldError {
+  color: var(--color-error);
+  font-size: 0.8125rem;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background-color: var(--color-error-light);
+  border-left: 4px solid var(--color-error);
+  border-radius: var(--radius-md);
+  margin-left: 36px;
+}
+
+.success {
+  color: var(--color-success-dark);
+  font-size: 0.8125rem;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background-color: var(--color-success-light);
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius-md);
+  margin-left: 36px;
+}
+
+@media (max-width: 768px) {
+  .inputGroup {
+    margin-left: 28px;
+  }
+
+  .fileInputLabel {
+    margin-left: 28px;
+  }
+
+  .uploadedInfo,
+  .fieldError,
+  .success {
+    margin-left: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .radioLabel {
+    gap: var(--spacing-md);
+  }
+
+  .radio {
+    width: 18px;
+    height: 18px;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    margin-left: var(--spacing-lg);
+  }
+
+  .fileInputLabel {
+    flex-direction: column;
+    margin-left: var(--spacing-lg);
+  }
+
+  .fileInputButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .validateBtn {
+    width: 100%;
+  }
+
+  .uploadedInfo,
+  .fieldError,
+  .success {
+    margin-left: var(--spacing-lg);
+  }
+}
