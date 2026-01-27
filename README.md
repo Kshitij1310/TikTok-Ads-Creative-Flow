@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TikTok Ads Creative Flow
 
 ## How to Run the Project
@@ -136,3 +137,7 @@ This TikTok Ads Creative Flow application demonstrates:
 - ✅ Comprehensive documentation
 
 Perfect for showcasing frontend engineering best practices, OAuth integration, and user-centric error handling under real-world constraints.
+=======
+# TikTok-Ads-Creative-Flow
+A React-based web application that simulates the TikTok Ads creative workflow, including OAuth-style authentication, mock access token generation, and secure localStorage handling to demonstrate real-world ad campaign flows.
+>>>>>>> 3372a3b5c2f90b7c44703001624db9e5f961c5d2
